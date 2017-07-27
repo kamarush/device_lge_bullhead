@@ -532,6 +532,7 @@ private:
         uint32_t index;
     } OfflineBuffer;
 
+    Mutex mOfflineBuffersLock; // Lock for offline buffers
     android::List<OfflineBuffer> mOfflineBuffers;
     android::List<OfflineBuffer> mOfflineMetaBuffers;
     int32_t mOfflineBuffersIndex;
